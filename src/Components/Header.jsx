@@ -60,7 +60,7 @@ const Header = () => {
                         <p><strong>Get your first bot free when you join pre-launch.</strong></p>
                         <div>
                             <div className="contact-input contact-center">
-                                <input onChange={handleInputChange} type='email' value={email} onBlur={(e) => e.target.placeholder = 'example@gmail.com'} onFocus={focusHandler} placeholder='example@gmail.com' required /><a href="/"><button onClick={openPopupHandler} className="buttonStyle" >Join Now</button></a>
+                                <input name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" onChange={handleInputChange} type='email' value={email} onBlur={(e) => e.target.placeholder = 'example@gmail.com'} onFocus={focusHandler} placeholder='example@gmail.com' required /><a href="/"><button onClick={openPopupHandler} className="buttonStyle" >Join Now</button></a>
 
                             </div>
                         </div></div>
