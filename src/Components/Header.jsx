@@ -42,7 +42,7 @@ const Header = () => {
     }
 
     let popup = null;
-    !open ? popup = null : popup = <div className="modal"><button onClick={closePopupHandler} className="buttonClose">x</button><div className="popup">Join our free Botwarriors VIP Facebook group to connect with bot devs now!<div className="center-button"><a target="_blank" href="https://www.facebook.com/groups/706560254111209" className="buttonGroup">Facebook Group</a></div></div></div>;
+    !open ? popup = null : popup = <div className="modal"><button onClick={closePopupHandler} className="buttonClose">x</button><div className="popup">Join our free Botwarriors VIP Facebook group to connect with bot devs now!<div className="center-button"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/groups/706560254111209" className="buttonGroup">Facebook Group</a></div></div></div>;
 
     return (
         <div id="main">
