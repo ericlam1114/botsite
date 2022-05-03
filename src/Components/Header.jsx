@@ -19,6 +19,10 @@ const Header = () => {
     }
 
 
+    const focusHandler = (e) => {
+        e.preventDefault();
+        e.target.placeholder = '';
+    };
     const handleInputChange = (event) => {
         setEmail(event.target.value)
         setFormData({ ...formData, [event.target.name]: event.target.value })
@@ -34,7 +38,9 @@ const Header = () => {
 
         const data = {
             Email: email,
-        }
+        };
+
+       
 
         axios.post('https://sheet.best/api/sheets/d72fe0c5-266c-42ae-90d2-a70757956234', data).then((response) =>
             console.log(response));
@@ -54,17 +60,17 @@ const Header = () => {
                         <p><strong>Get your first bot free when you join pre-launch.</strong></p>
                         <div>
                             <div className="contact-input contact-center">
-                                <input onChange={handleInputChange} type='email' value={email} onBlur={(e) => e.target.placeholder = 'example@gmail.com'} onFocus={(e) => e.target.placeholder = ''} placeholder='example@gmail.com' required /><a href="/"><button onClick={openPopupHandler} className="buttonStyle" >Join Now</button></a>
+                                <input onChange={handleInputChange} type='email' value={email} onBlur={(e) => e.target.placeholder = 'example@gmail.com'} onFocus={focusHandler} placeholder='example@gmail.com' required /><a href="/"><button onClick={openPopupHandler} className="buttonStyle" >Join Now</button></a>
 
                             </div>
-                            </div></div>
+                        </div></div>
                     <div className="shiftThis">
 
 
                         <SideImage /></div>
                 </div></div>
             </form>
-{popup}
+            {popup}
         </div>
     )
 }
